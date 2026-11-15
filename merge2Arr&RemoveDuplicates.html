@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+    function merge(arr1, arr2) 
+    {
+        let merged = [];
+
+        for (let i = 0; i < arr1.length; i++) 
+        {
+            merged[merged.length] = arr1[i];
+        }
+
+        for (let i = 0; i < arr2.length; i++) 
+        {
+            merged[merged.length] = arr2[i];
+        }   
+        return merged;
+    }
+
+    function removeDuplicates(merged)
+    {
+        let result = [];
+
+        for (let i = 0; i < merged.length; i++) 
+        {
+            let isDuplicate = false;
+
+            for (let j = 0; j < result.length; j++) 
+            {  
+                if (merged[i] === result[j]) 
+                {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (isDuplicate === false) 
+            {
+                result[result.length] = merged[i];
+            }
+        }
+    return result;
+    }
+
+
+    console.log(removeDuplicates(merge([10, 20, 30, 40], [30, 40, 50, 60])));
+    </script>
+</body>
+</html>

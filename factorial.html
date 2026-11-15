@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // function factorial(x)
+        // {
+        //     let arr = [];
+        //     let result = 1;
+
+        //     for (i = 1; i <= x; i++)
+        //     {
+        //         arr += i;
+        //     }
+
+        //     for (j = 0; j < arr.length; j++)
+        //     {
+        //         result = result * arr[j];
+        //     }
+        //     return result;
+        // }
+        // console.log(factorial(12));
+
+        function factorial(x)
+        {
+            let arr = [];
+            let result = 1;
+
+            for (let i = 1; i <= x; i++)
+            {
+                arr[i - 1] = i;
+            }
+
+            for (let j = 0; j < arr.length; j++)
+            {
+                result = result * arr[j];
+            }
+            return result;
+        }
+        console.log(factorial(12));
+    </script>
+</body>
+</html>
